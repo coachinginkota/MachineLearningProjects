@@ -1,0 +1,170 @@
+﻿<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Corona : Covid-19 : Prediction</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+    <link href="static/css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+	<script src="static/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+	<script src="static/js/jquery.flexslider.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+	<div class="h_bg">
+		<div class="wrap">
+			<div class="header">
+				<div class="logo">
+					<h1>
+						<a href="index.html">
+							<img src="images/logo.png" alt="">
+						</a>
+					</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="nav_bg">
+		<div class="wrap">
+	        <ul class="nav">
+				<li class="active">
+					<a href="/">Home</a>
+				</li>
+                <li>
+					<a href="World">World Updates</a>
+				</li>
+			<!--	
+				<li>
+					<a href="staff.html">Staff</a>
+				</li>
+				<li>
+					<a href="project.html">Projects</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact</a>
+				</li>-->
+				<div class="clear"></div>
+			</ul>
+		</div>
+	</div>
+	<div class="s_bg">
+		<div class="wrap">
+			<div class="cont_main">
+				<div class="details">
+
+                   <form name="Manufacturer" action ='' method="post" >
+
+                   <div class="select"> 
+            <select name="country" id="country"> 
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Italy">Italy</option>
+                    <option value="China">China</option>
+                    </select>
+                    </div>
+                  
+					<div class="det-pic">
+						<h2> {{ title}} : Prediction of Coronavirus Cases</h2>
+                              <h3>Next 20 Days Prediction<br />
+                     Current Cases: {{current}}<br />
+                     After 20 Days: {{total}}</h3>
+                        <input type="hidden" id="hdnCntValue" value="{{ title}}" />
+                       <!--   <img src="{{ urlPred}}" alt="Chart" style="width:90%;" />-->
+<img src="{{url_for('static', filename=urlPred)}}" alt="Chart" style="width:90%;" />
+ 
+					</div>
+
+       
+                    </form>
+
+                     <script type="text/javascript">
+
+                         jQuery(function () {
+
+                             jQuery('#country').val(jQuery('#hdnCntValue').val());
+
+                             jQuery('#country').change(function () {
+                                 this.form.submit();
+                             });
+                         });
+
+                    </script>
+
+			<!--		<div class="det-para">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+							aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							Duis aute irure dolor Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+							ex ea commodo consequat. Duis aute irure dolor Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							nisi ut aliquip ex ea commodo consequat.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+							aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							Duis aute irure dolor Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+							ex ea commodo consequat. Duis aute irure dolor</p>
+						<div class="rd_more">
+							<a href="details.html">
+								<button class="btn btn-2 btn-2c">Read More</button>
+							</a>
+						</div>
+					</div>-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ftr-bg">
+		<div class="wrap">
+			<div class="footer">
+				<div class="f_nav">
+					<ul>
+                    <li class="active">
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="World">World Updates</a>
+						</li>
+
+					<!--	<li class="active">
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="about.html">About</a>
+						</li>
+						<li>
+							<a href="staff.html">Staff</a>
+						</li>
+						<li>
+							<a href="project.html">Projects</a>
+						</li>
+						<li>
+							<a href="contact.html">Contact</a>
+						</li>-->
+					</ul>
+				</div>
+				<div class="copy">
+					<p class="w3-link">© Pro Clinic. All Rights Reserved | Design by&nbsp;
+						<a href=""> </a>
+					</p>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+
+</html>
